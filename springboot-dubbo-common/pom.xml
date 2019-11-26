@@ -5,29 +5,21 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.0.RELEASE</version>
+        <version>2.2.1.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>dubbo</artifactId>
+    <artifactId>springboot-dubbo-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-dubbo-collections</name>
-    <description>springboot-dubbo-collections project for Spring Boot</description>
+    <name>springboot-dubbo-common</name>
+    <description>springboot-dubbo-common project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
-    <modules>
-        <!-- 主要放实体、接口、也可以放一些公用的工具类工程-->
-        <module>springboot-dubbo-common</module>
-        <!-- 消费端工程-->
-        <module>springboot-dubbo-customer</module>
-        <!-- 服务提供者工程-->
-        <module>springboot-dubbo-provider</module>
-    </modules>
-
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -35,14 +27,23 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -54,6 +55,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
     </dependencies>
 
     <build>
